@@ -28,7 +28,7 @@ public class CustomerServiceImpl implements CustomerService {
      * This method retrieves the customer based on customer id from the database
      * in database.
      * @param customerId
-     * @return ResponseEntity<Long>
+     * @return Customer
      */
     @Override
     public Customer findCustomer(final Long customerId) {
