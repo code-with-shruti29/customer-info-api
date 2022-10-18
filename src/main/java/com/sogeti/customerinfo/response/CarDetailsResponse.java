@@ -5,7 +5,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
-
+/**
+ * Class for sending response with List of Cars and car details
+ *
+ * @author Shruti Gautam
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

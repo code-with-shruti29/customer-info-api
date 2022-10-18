@@ -4,10 +4,11 @@ import com.sogeti.customerinfo.entity.Customer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-import java.util.List;
-
+/**
+ * Class for sending response with with single customer details
+ * @author Shruti Gautam
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

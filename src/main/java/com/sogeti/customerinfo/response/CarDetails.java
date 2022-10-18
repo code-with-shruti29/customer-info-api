@@ -4,7 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
+/**
+ * Class for sending response with Car Information.
+ * This is part of {@link CarDetailsResponse}
+ * @author Shruti Gautam
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

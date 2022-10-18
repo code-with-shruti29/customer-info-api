@@ -3,9 +3,18 @@ package com.sogeti.customerinfo.entity;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 
-import javax.persistence.*;
-import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.MapsId;
+import javax.persistence.OneToOne;
 
+/**
+ * Entity class for Address
+ *
+ * @author Shruti Gautam
+ *
+ */
 @Data
 @Entity
 public class Address {

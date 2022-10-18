@@ -1,5 +1,8 @@
 package com.sogeti.customerinfo.request;
-
+/**
+ * Class for incoming request for calculating lease rate
+ * @author Shruti Gautam
+ */
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;

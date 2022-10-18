@@ -3,6 +3,7 @@ package com.sogeti.customerinfo.controller;
 import com.google.gson.Gson;
 import com.sogeti.customerinfo.request.LeaseInformationRequest;
 import com.sogeti.customerinfo.response.CarDetailsResponse;
+import com.sogeti.customerinfo.response.SingleCarDetailsResponse;
 import com.sogeti.customerinfo.service.CarLeaseService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,9 +41,19 @@ public class CarLeaseControllerTest {
     }
 
     @Test
+    public void testSingleCars() throws Exception {
+        SingleCarDetailsResponse singleCarDetailsResponse = new SingleCarDetailsResponse();
+        when(carLeaseService.getCarInformationByCarId(2L)).thenReturn(singleCarDetailsResponse);
+        standaloneSetup(carLeaseController)
+                .build()
+                .perform(get("/api/cars/2").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+    }
+
+    @Test
     public void testCalculateLeaseRate() throws Exception {
         LeaseInformationRequest leaseInformationRequest= new LeaseInformationRequest();
-        when(carLeaseService.calculateLease(leaseInformationRequest)).thenReturn(2f);
+        when(carLeaseService.calculateLease(leaseInformationRequest)).thenReturn(2F);
         Gson gson= new Gson();
         standaloneSetup(carLeaseController)
                 .build()
