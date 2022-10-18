@@ -1,0 +1,8 @@
+com.sogeti.customerinfo
+com.sogeti.customerinfo.controller
+com.sogeti.customerinfo.domain
+com.sogeti.customerinfo.entity
+com.sogeti.customerinfo.repository
+com.sogeti.customerinfo.request
+com.sogeti.customerinfo.response
+com.sogeti.customerinfo.service
